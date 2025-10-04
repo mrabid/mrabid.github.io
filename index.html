@@ -59,29 +59,39 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-
-
+  <header id="header">
     <div class="container">
+      <div class="logo">
+        <h1><a href="#hero-main">Al Abid Supto</a></h1>
+      </div>
       
-      <h1><a href="index.html">Al Abid Supto</a></h1>
-      <h2 style="color:#fff">I'm a <span class="typing" style="color:#12D640"></span></h2>
-      <nav class="nav-menu d-none d-lg-block">
+      <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
+          <li class="active"><a href="#hero-main"><span>Home</span></a></li>
           <li><a href="#about"><span>About</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-          <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#publication"> <span>Publication</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1AuUA_NCSYfRIcIcIQjWcYJWSU98BzGH7/view?usp=sharing" target="_blank"> <span>Resume</span></a></li>
-          <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
-          <li><a href="#contacts"> <span>Contact</span></a></li>
-
+          <li><a href="#skills"><span>Skills</span></a></li>
+          <li><a href="#experience"><span>Experience</span></a></li>
+          <li><a href="#portfolio"><span>Projects</span></a></li>
+          <li><a href="#education"><span>Education</span></a></li>
+          <li><a href="#publication"><span>Publications</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1AuUA_NCSYfRIcIcIQjWcYJWSU98BzGH7/view?usp=sharing" target="_blank"><span>Resume</span></a></li>
+          <li><a href="#contacts"><span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
+      <!-- Mobile nav toggle button -->
+      <button type="button" class="mobile-nav-toggle d-lg-none">
+        <i class="icofont-navigation-menu"></i>
+      </button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Main Section ======= -->
+  <section id="hero-main" class="hero-main d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center">
+      <h1><a href="index.html">Al Abid Supto</a></h1>
+      <h2 style="color:#fff">I'm a <span class="typing" style="color:#12D640"></span></h2>
       <div class="social-links">
           <a href="https://www.linkedin.com/in/al-abid/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/mrabid" target="_blank" class="github"><i class="bx bxl-github"></i></a>
@@ -91,11 +101,9 @@
           <a href="https://www.instagram.com/mr.alabid/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
           <a href="https://www.youtube.com/@alabid4795" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
           <a href="mailto:mdalabidsupto@gmail.com" target="_blank" class="gmail"><i class="bx bx-mail-send"></i></a>
-
       </div>
-
     </div>
-  </header><!-- End Header -->
+  </section><!-- End Hero Main Section -->
 
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
@@ -212,82 +220,201 @@
 
 
 
-  <!-- ======= Education Section ======= -->
-  <section id="education" class="services">
+  <!-- Start Skills Section -->
+
+  <section id="skills" class="skills section-show">
     <div class="container">
       <div class="section-title">
-        <h2>Education</h2>
+        <h2>Skills</h2>
+        <p>My Technical Expertise</p>
       </div>
+
       <div class="row">
-        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
 
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/iub.png" class="img-fluid" alt="">
-              <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">Ahmedabad University</a><br> </h4> -->
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>B.Sc Engineering(CSE)</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">January 2019 - May 2024</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
-              <ul style="text-align:left;color:#fff;">
-                <li>Data Structures &amp; Algorithms</li>
-                <li>Database Management Systems</li>
-                <li>Web Application & Internet</li>
-                <li>System Analysis and Design</li>
-                <li>Operating Systems</li>
-                <li>Android App Development</li>
-                <li>Artificial Intelligence</li>
-                <li>Image Processing</li>
-              </ul>
-            </div>
-          </div>
+        <!-- Languages -->
+        <div class="col-lg-6 col-md-12 skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skills-grid">
+            <a href="https://docs.python.org/3/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python">
+              <span>Python</span>
+            </a>
+            <a href="https://docs.oracle.com/en/java/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java">
+              <span>Java</span>
+            </a>
+            <a href="https://cplusplus.com/doc/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/cplusplus/cplusplus-horizontal.svg" alt="C++">
+              <span>C++</span>
+            </a>
+            <a href="https://en.cppreference.com/w/c" target="_blank" class="skill-item">
+              <span>C</span>
+            </a>
+            <a href="https://dart.dev/guides" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-horizontal.svg" alt="Dart">
+              <span>Dart</span>
+            </a>
+            <a href="https://www.w3schools.com/sql/" target="_blank" class="skill-item">
+              <span>SQL</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5">
+              <span>HTML5</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+              <span>CSS3</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/javascript/javascript-horizontal.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </a>
+            <a href="https://www.php.net/docs.php" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/php/php-horizontal.svg" alt="PHP">
+              <span>PHP</span>
+            </a>
         </div>
       </div>
 
-
-    <div class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Online Certification</h2>
-      </div>
-
-      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
-
-         
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Algorithms-Design and Analysis</h4>
-              <div class="portfolio-links">
-                <a href="" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+        <!-- Databases -->
+        <div class="col-lg-6 col-md-12 skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="skill-category-title">Databases</h3>
+          <div class="skills-grid">
+            <a href="https://dev.mysql.com/doc/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL">
+              <span>MySQL</span>
+            </a>
+            <a href="https://www.sqlite.org/docs.html" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-horizontal.svg" alt="SQLite">
+              <span>SQLite</span>
+            </a>
+            <a href="https://www.apachefriends.org/docs/index.html" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/apache_friends_xampp/apache_friends_xampp-horizontal.svg" alt="XAMPP">
+              <span>XAMPP</span>
+            </a>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ucsd.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Algorithmic Toolbox</h4>
-              <div class="portfolio-links">
-                <a href="" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+        <!-- Frameworks / Libraries -->
+        <div class="col-lg-6 col-md-12 skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="skill-category-title">Frameworks / Libraries</h3>
+          <div class="skills-grid">
+            <a href="https://react.dev/docs" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-horizontal.svg" alt="ReactJS">
+              <span>ReactJS</span>
+            </a>
+            <a href="https://nextjs.org/docs" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/nextjs/nextjs-horizontal.svg" alt="Next.js">
+              <span>Next.js</span>
+            </a>
+            <a href="https://tailwindcss.com/docs" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-horizontal.svg" alt="Tailwind CSS">
+              <span>Tailwind CSS</span>
+            </a>
+            <a href="https://pytorch.org/docs/stable/index.html" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-horizontal.svg" alt="PyTorch">
+              <span>PyTorch</span>
+            </a>
+            <a href="https://www.tensorflow.org/learn" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow">
+              <span>TensorFlow</span>
+            </a>
+            <a href="https://keras.io/api/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/keras/keras-horizontal.svg" alt="Keras">
+              <span>Keras</span>
+            </a>
+            <a href="https://scikit-learn.org/stable/documentation.html" target="_blank" class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn">
+              <span>Scikit-learn</span>
+            </a>
+            <a href="https://docs.opencv.org/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="OpenCV">
+              <span>OpenCV</span>
+            </a>
+            <a href="https://www.nltk.org/howto.html" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/nltk/nltk-horizontal.svg" alt="NLTK">
+              <span>NLTK</span>
+            </a>
+            <a href="https://spacy.io/usage/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/spacy/spacy-horizontal.svg" alt="spaCy">
+              <span>spaCy</span>
+            </a>
+            <a href="https://docs.ultralytics.com/yolov5/" target="_blank" class="skill-item">
+              <span>Yolo</span>
+            </a>
+            <a href="https://flutter.dev/docs" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-horizontal.svg" alt="Flutter">
+              <span>Flutter</span>
+            </a>
+            <a href="https://docs.djangoproject.com/en/stable/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="Django">
+              <span>Django</span>
+            </a>
           </div>
         </div>
 
-        
-
-        
+        <!-- Tools -->
+        <div class="col-lg-6 col-md-12 skill-category" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="skill-category-title">Tools</h3>
+          <div class="skills-grid">
+            <a href="https://docs.anaconda.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/anaconda/anaconda-horizontal.svg" alt="Anaconda">
+              <span>Anaconda</span>
+            </a>
+            <a href="https://code.visualstudio.com/docs" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/visualstudiocode/visualstudiocode-horizontal.svg" alt="VS Code">
+              <span>VS Code</span>
+            </a>
+            <a href="https://www.cursor.com/docs" target="_blank" class="skill-item">
+              <img src="https://seeklogo.com/images/C/cursor-ide-logo-D6E4239B25-seeklogo.com.png" alt="Cursor IDE">
+              <span>Cursor IDE</span>
+            </a>
+            <a href="https://git-scm.com/doc" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git">
+              <span>Git</span>
+            </a>
+            <a href="https://docs.github.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/github/github-horizontal.svg" alt="GitHub">
+              <span>GitHub</span>
+            </a>
+            <a href="https://docs.gitlab.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/gitlab/gitlab-horizontal.svg" alt="GitLab">
+              <span>GitLab</span>
+            </a>
+            <a href="https://www.jetbrains.com/help/pycharm/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/jetbrains_pycharm/jetbrains_pycharm-horizontal.svg" alt="PyCharm">
+              <span>PyCharm</span>
+            </a>
+            <a href="https://www.jetbrains.com/help/idea/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/jetbrains_intellijidea/jetbrains_intellijidea-horizontal.svg" alt="IntelliJ IDEA">
+              <span>IntelliJ IDEA</span>
+            </a>
+            <a href="https://docs.docker.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/docker/docker-horizontal.svg" alt="Docker">
+              <span>Docker</span>
+            </a>
+            <a href="https://redis.io/docs/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/redis/redis-horizontal.svg" alt="Redis">
+              <span>Redis</span>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/websocket/websocket-icon.svg" alt="WebSocket">
+              <span>WebSocket</span>
+            </a>
+            <a href="https://docs.aws.amazon.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS">
+              <span>AWS</span>
+            </a>
+            <a href="https://docs.digitalocean.com/" target="_blank" class="skill-item">
+              <img src="https://www.vectorlogo.zone/logos/digitalocean/digitalocean-horizontal.svg" alt="Digital Ocean">
+              <span>Digital Ocean</span>
+            </a>
+          </div>
         </div>
 
       </div>
     </div>
-    </div>
-
-  </section>
-  <!-- End Education Section -->
+  </section><!-- End Skills Section -->
 
 
 
@@ -300,42 +427,65 @@
       </div>
       <div class="row">
           <div class="col-lg-12" data-aos="fade-up">
+
               <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.facebook.com/ADRL.55" style="color:#12d640">Apurba-DIU Research and Development LAB</a><br> </h4>
-                <h5 style="text-align:left;">October 2021 - Present</h5>
+                <h4 style="text-align:left;"><a href="#" style="color:#12d640">Chuti Resort Ltd.</a><br> </h4>
+                <h5 style="text-align:left;">Sept. 2025 – Present</h5>
+                <p style="text-align:left;color:#fff"><em>Executive Web Developer</em></p>
+                <ul style="text-align:left;">
+                  <li>Managed end-to-end development, maintenance, and deployment of all Chuti Group websites, ensuring seamless performance and uptime.</li>
+                  <li>Built and enhanced web applications using React.js, JavaScript, Tailwind CSS, HTML, and CSS, delivering responsive and user-friendly interfaces.</li>
+                  <li>Streamlined version control and deployment processes with Git and server management, improving workflow efficiency and reliability.</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="#" style="color:#12d640">IoT eXperience, LLC</a><br> </h4>
+                <h5 style="text-align:left;">May 2025 – Present</h5>
+                <p style="text-align:left;color:#fff"><em>Software Engineer</em></p>
+                <ul style="text-align:left;">
+                  <li>Built a full-stack IoT dashboard with React, Flask, and SQLite for real-time data visualization and device management.</li>
+                  <li>Engineered dynamic charts with Chart.js and optimized backend performance using SQLAlchemy.</li>
+                  <li>Strengthened system stability through rigorous testing and debugging.</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="#" style="color:#12d640">Varygen Corp Limited</a><br> </h4>
+                <h5 style="text-align:left;">Oct. 2024 – Apr. 2024</h5>
+                <p style="text-align:left;color:#fff"><em>Software Engineer</em></p>
+                <ul style="text-align:left;">
+                  <li>Collaborated with a dynamic development team to execute software development, testing, and documentation tasks.</li>
+                  <li>Enhanced code quality through systematic testing and debugging.</li>
+                  <li>Contributed to innovative projects by assisting in the design and implementation of robust, real-world applications.</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="https://www.facebook.com/ADRL.55" style="color:#12d640">Apurba-DIU Research and Development Lab</a><br> </h4>
+                <h5 style="text-align:left;">Oct. 2021 – Oct. 2024</h5>
                 <p style="text-align:left;color:#fff"><em>Research Assistant</em></p>
                 <ul style="text-align:left;">
-                  <li>Worked on Literature Review, Data Collection and Analysis, Algorithm Development with Model Implementation and fine-tuning, Experimentation and Simulation, Documentation and Reporting.</li>
-                  <li>Currently Working on Information retrieval on image-to-text using LLM.</li>
-                  <li>Currently Working on the review paper ("The Prior Knowledge on Natural Language Processing in Bengali Explosive Learning of Seven Years"), where reviewed more than 350 articles.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="http://iub.ac.bd/" style="color:#12d640">Independent University,Bangladesh</a><br> </h4>
-                <h5 style="text-align:left;">January 2021 - January 2022</h5>
-                <p style="text-align:left;color:#fff"><em>Teaching Assistant</em></p>
-                <ul style="text-align:left;">
-                  <li>Evaluate exam, classwork, and homework.</li>
-                  <li>Maintain student records as required.</li>
-                  <li>Conduct extra sessions to help students.</li>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.facebook.com/groups/331494894143654" style="color:#12d640">(ACM) Club of CSE</a><br> </h4>
-                <h5 style="text-align:left;">January 2020 - Dec 2020</h5>
-                <p style="text-align:left;color:#fff"><em>Content Writer</em></p>
-                <ul style="text-align:left;">
-                  <li>Content creation and writing.</li>
+                  <li>Spearheaded literature reviews, data collection, and algorithm development, driving successful model implementation, fine-tuning, and experimentation.</li>
+                  <li>Developed image-to-text information retrieval using LLMs and image segmentation projects leveraging SSM-based models.</li>
+                  <li>Co-authored and submitted a research paper to an ACM journal and conducted software testing and model validation to ensure robust AI performance.</li>
                 </ul>
               </div>
              
+              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align:left;"><a href="http://iub.ac.bd/" style="color:#12d640">Independent University, Bangladesh</a><br> </h4>
+                <h5 style="text-align:left;">Jan. 2021 – Jan. 2022</h5>
+                <p style="text-align:left;color:#fff"><em>Teaching Assistant</em></p>
+                <ul style="text-align:left;">
+                  <li>Evaluated class projects and assisted in lab sessions for the Data Structures course, providing personalized guidance to enhance students’ problem-solving skills.</li>
+                  <li>Managed grading, student records, and additional support sessions, fostering academic excellence and strong course performance.</li>
+                </ul>
+              </div>
       
           </div>
         </div>
     </div>
-  </section>
-
-  <!-- End Experience Section -->
+  </section><!-- End Experience Section -->
 
 
 
@@ -496,6 +646,87 @@
   <!-- End Project Section -->
 
 
+
+  <!-- Start Education Section -->
+
+  <section id="education" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Education</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
+
+            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+              <img src="assets/img/education/iub.png" class="img-fluid" alt="">
+              <!-- <h4 style="text-align:left;"><a href="https://ahduni.edu.in/" target="_blank" style="color:#12d640">Ahmedabad University</a><br> </h4> -->
+              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>B.Sc Engineering(CSE)</em></p>
+              <h5 style="text-align:left;padding: 0px 10px;">January 2019 - May 2024</h5>
+              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Relevant Coursework</h6>
+              <ul style="text-align:left;color:#fff;">
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Database Management Systems</li>
+                <li>Web Application & Internet</li>
+                <li>System Analysis and Design</li>
+                <li>Operating Systems</li>
+                <li>Android App Development</li>
+                <li>Artificial Intelligence</li>
+                <li>Image Processing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <h2>Online Certification</h2>
+      </div>
+
+      <div class="row portfolio-container" style="position: relative; height: 437.75px;">
+
+         
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 370px; top: 0px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/stanford.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Algorithms-Design and Analysis</h4>
+              <div class="portfolio-links">
+                <a href="" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="position: absolute; left: 740px; top: 0px;">
+          <div class="portfolio-wrap">
+            <img src="assets/img/certification/ucsd.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Algorithmic Toolbox</h4>
+              <div class="portfolio-links">
+                <a href="" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        
+        </div>
+
+      </div>
+    </div>
+    </div>
+
+  </section>
+  <!-- End Education Section -->
+
+
+
   <!-- Start Publication Section -->
 
   <section id="publication" class="services">
@@ -539,86 +770,6 @@
 
   <!-- End Publication Section -->
 
-
-  <!-- Start Skills Section -->
-
-  <section id="skills" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages and Databases</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone" height="50" width="150">
-                  <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50" width="120">
-                  <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="upload.wikimedia.org" height="60" width="90">
-                  <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70" width="130">
-                  <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone" height="50" width="190">
-
-                </p>
-            </div>
-            <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Frameworks</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="upload.wikimedia.org" width="90" height="70">
-              </p>
-          </div>
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100" style="background:#fff">
-              <h4 style="text-align:left;color:#09203a">Tools</h4>
-                <p style="text-align:left;">
-                  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
-                  <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
-              </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End Skills Section -->
-
-
-
-
-  <!-- Start Links section -->
-  <section id="links" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Resume & Links</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1TeRQ01kQ_xdN88NoQTZ7jqvm7GnmMQGX/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="" target="_blank">Resume</a></h4>
-          <p class="description" style="color:#fff;">The link contains downloadable resume</p>
-        </div>
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up">
-          <a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank"><div class="icon"><i class="icofont-link"></i></div></a>
-          <h4 class="title"><a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank">LeetCode Repository</a></h4>
-          <p class="description" style="color:#fff;"> The github repository contains leetcode problems solution in python.</p>
-        </div>
-        <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://techingenious.herokuapp.com/" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://techingenious.herokuapp.com/" target="_blank">Blog</a></h4>
-          <p class="description" style="color:#fff;">Blog containing articles on AI, coding, development</p>
-        </div> -->
-      </div>
-    </div>
-  </section> <!--End Links Section -->
 
 
   <!-- Start Contact Section -->
@@ -678,6 +829,17 @@
 
   <!-- End Contact Section -->
 
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Al Abid Supto</span></strong>. All Rights Reserved &copy;2021
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -691,7 +853,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["Software Engineer &#128526;", "Researcher &#128519;","AI Enthusiast &#128564;","Coder &#128521;"],
+      strings: ["Software Engineer", "Researcher","AI Enthusiast","Coder"],
       loop: true,
       typeSpeed: 65,
       backSpeed: 65
