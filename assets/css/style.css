@@ -653,12 +653,12 @@ section {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding-top: 110px; /* Space for fixed header (80px + 30px margin) */
+  padding-top: 60px; /* Further reduced space for fixed header */
   padding-bottom: 60px;
-  opacity: 1; /* Always visible, controlled by scroll reveal JS */
+  opacity: 1;
   z-index: 2;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  min-height: calc(100vh - 80px); /* Ensure sections fill viewport below header */
+  min-height: calc(100vh - 80px);
 }
 
 /* Remove section-show specific styling */
@@ -673,19 +673,19 @@ section.section-show {
 
 @media (max-width: 992px) {
   section {
-    padding-top: 100px;
+    padding-top: 50px; /* Further reduced for smaller screens */
     min-height: calc(100vh - 70px);
   }
 }
 
 @media (max-width: 576px) {
   section {
-    padding-top: 90px;
+    padding-top: 40px; /* Further reduced for mobile */
     min-height: calc(100vh - 60px);
   }
   
   section.section-show {
-    padding-top: 90px;
+    padding-top: 40px;
     padding-bottom: 40px;
     min-height: calc(100vh - 60px);
   }
