@@ -571,6 +571,97 @@ p {
   display: block;
 }
 
+/* Mobile Theme Toggle */
+.mobile-theme-toggle {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.theme-toggle-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-mobile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.theme-toggle-mobile:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.theme-toggle-mobile:hover::before {
+  opacity: 0.2;
+}
+
+.theme-toggle-mobile i {
+  font-size: 20px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-mobile .theme-icon-light {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0);
+}
+
+.theme-toggle-mobile .theme-icon-dark {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .theme-toggle-mobile .theme-icon-light {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+[data-theme="light"] .theme-toggle-mobile .theme-icon-dark {
+  opacity: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+.theme-toggle-mobile.rotating i {
+  animation: rotateIcon 0.5s ease;
+}
+
+/* Light Mode Mobile Theme Toggle */
+[data-theme="light"] .theme-toggle-mobile {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .theme-toggle-mobile:hover {
+  background: linear-gradient(135deg, rgba(76, 81, 191, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  border-color: rgba(76, 81, 191, 0.3);
+  box-shadow: 0 8px 25px rgba(76, 81, 191, 0.2);
+}
+
 /* Tablet & Mobile Responsive */
 @media (max-width: 1200px) {
   #header .container {
@@ -605,6 +696,17 @@ p {
     align-items: center;
     justify-content: center;
   }
+  
+  /* Show theme toggle on mobile - position it next to hamburger */
+  .theme-toggle {
+    position: fixed;
+    right: 80px;
+    top: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -623,7 +725,9 @@ p {
   .theme-toggle {
     width: 40px;
     height: 40px;
-    margin-left: 10px;
+    right: 70px;
+    top: 15px;
+    margin-left: 0;
   }
   
   .theme-toggle i {
@@ -4125,6 +4229,8 @@ body {
   background: rgba(255, 255, 255, 0.06);
   border: 2px solid rgba(102, 126, 234, 0.4);
   box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  overflow: visible;
+  margin-right: 20px;
 }
 
 .pricing-card.featured:hover {
@@ -4145,18 +4251,19 @@ body {
 
 .pricing-card.featured .badge {
   position: absolute;
-  top: 20px;
-  right: -35px;
+  top: 37px;
+  right: -7px;
   background: var(--gradient-1);
   color: #ffffff;
-  padding: 8px 45px;
-  font-size: 12px;
+  padding: 4px 15px;
+  font-size: 8px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   transform: rotate(45deg);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
   z-index: 10;
+  white-space: nowrap;
 }
 
 /* Card Header */
@@ -4649,9 +4756,10 @@ body {
   }
 
   .pricing-card.featured .badge {
-    font-size: 10px;
-    padding: 6px 40px;
-    right: -38px;
+    font-size: 7px;
+    padding: 3px 12px;
+    right: -2px;
+    top: 40px;
   }
 
   .custom-projects {
