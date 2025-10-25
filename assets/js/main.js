@@ -142,6 +142,16 @@
   // Activate/show sections on load with hash links - Simplified
   if (window.location.hash) {
     var initial_nav = window.location.hash;
+    
+    // Special handling for contacts hash to prevent auto-scroll on reload
+    if (initial_nav === '#contacts') {
+      // Clear the hash to prevent unwanted scrolling
+      history.replaceState(null, null, window.location.pathname);
+      // Scroll to top instead
+      $('html, body').scrollTop(0);
+      return;
+    }
+    
     if ($(initial_nav).length) {
       // No header-top class needed as header is always compact
       $('.nav-menu .active, .mobile-nav .active').removeClass('active');

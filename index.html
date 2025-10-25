@@ -74,13 +74,20 @@
           <li><a href="#portfolio"><span>Projects</span></a></li>
           <li><a href="#education"><span>Education</span></a></li>
           <li><a href="#publication"><span>Publications</span></a></li>
+          <li><a href="#pricing"><span>Services</span></a></li>
           <li><a href="https://drive.google.com/file/d/10qtH9lg1oy2qOLB4I8zfDQZoWAGVg5Fp/view?usp=sharing?usp=sharing" target="_blank"><span>Resume</span></a></li>
           <li><a href="#contacts"><span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
+      <!-- Theme Toggle Button -->
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="bx bx-sun theme-icon-light"></i>
+        <i class="bx bx-moon theme-icon-dark"></i>
+      </button>
+
       <!-- Mobile nav toggle button -->
-      <button type="button" class="mobile-nav-toggle d-lg-none">https://drive.google.com/file/d/10qtH9lg1oy2qOLB4I8zfDQZoWAGVg5Fp/view?usp=sharing
+      <button type="button" class="mobile-nav-toggle d-lg-none">
         <i class="icofont-navigation-menu"></i>
       </button>
 
@@ -658,58 +665,583 @@
 
 
 
+  <!-- Start Pricing Plans Section -->
+
+  <section id="pricing" class="pricing">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services & Pricing</h2>
+        <p>Professional Solutions Tailored to Your Needs</p>
+      </div>
+
+      <!-- Full-Stack Web Development -->
+      <div class="pricing-category">
+        <div class="category-header">
+          <i class="bx bx-code-alt"></i>
+          <h3>💻 Full-Stack Web Development</h3>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Starter Launch</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">150</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 3–5 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> 1-Page responsive website</li>
+                  <li><i class="bx bx-check"></i> HTML, CSS, Tailwind/Bootstrap</li>
+                  <li><i class="bx bx-check"></i> Basic animations</li>
+                  <li><i class="bx bx-check"></i> Contact form integration</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card featured">
+              <div class="badge">Most Popular</div>
+              <div class="card-header">
+                <h4>Pro Build</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">350</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 7–10 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> React/Next.js frontend</li>
+                  <li><i class="bx bx-check"></i> Flask/Laravel backend</li>
+                  <li><i class="bx bx-check"></i> REST API integration</li>
+                  <li><i class="bx bx-check"></i> MySQL/SQLite database</li>
+                  <li><i class="bx bx-check"></i> User authentication</li>
+                  <li><i class="bx bx-check"></i> Modern UI/UX design</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Ultimate Web Suite</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">650</span>
+                  <span class="plus">+</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 12–18 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Enterprise-level web app</li>
+                  <li><i class="bx bx-check"></i> Admin panel & dashboard</li>
+                  <li><i class="bx bx-check"></i> Data analytics integration</li>
+                  <li><i class="bx bx-check"></i> API integration</li>
+                  <li><i class="bx bx-check"></i> AWS/DigitalOcean deployment</li>
+                  <li><i class="bx bx-check"></i> Performance optimization</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI & Chatbot Solutions -->
+      <div class="pricing-category">
+        <div class="category-header">
+          <i class="bx bx-bot"></i>
+          <h3>🤖 AI & Chatbot Solutions</h3>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Smart Assistant</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">200</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 4–6 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Custom chatbot (Flask/Python)</li>
+                  <li><i class="bx bx-check"></i> API integration</li>
+                  <li><i class="bx bx-check"></i> PDF-based Q&A bot</li>
+                  <li><i class="bx bx-check"></i> Basic conversation flow</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card featured">
+              <div class="badge">Most Popular</div>
+              <div class="card-header">
+                <h4>AI Pro Bot</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">400</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 7–12 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> NLP-powered chatbot</li>
+                  <li><i class="bx bx-check"></i> OpenAI API integration</li>
+                  <li><i class="bx bx-check"></i> Context memory system</li>
+                  <li><i class="bx bx-check"></i> Data upload support</li>
+                  <li><i class="bx bx-check"></i> Web integration</li>
+                  <li><i class="bx bx-check"></i> Custom training</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Intelligent Automation Suite</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">800</span>
+                  <span class="plus">+</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 15–25 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> End-to-end AI system</li>
+                  <li><i class="bx bx-check"></i> Custom ML models</li>
+                  <li><i class="bx bx-check"></i> Training pipeline</li>
+                  <li><i class="bx bx-check"></i> Analytics dashboard</li>
+                  <li><i class="bx bx-check"></i> Full deployment</li>
+                  <li><i class="bx bx-check"></i> Ongoing support</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Collection & Annotation -->
+      <div class="pricing-category">
+        <div class="category-header">
+          <i class="bx bx-data"></i>
+          <h3>📊 Data Collection & Annotation</h3>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Data Prep Basic</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">120</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 3–5 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Data gathering</li>
+                  <li><i class="bx bx-check"></i> Data cleaning</li>
+                  <li><i class="bx bx-check"></i> Format standardization</li>
+                  <li><i class="bx bx-check"></i> ML project ready</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card featured">
+              <div class="badge">Most Popular</div>
+              <div class="card-header">
+                <h4>Annotation Pro</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">300</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 6–10 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Image/text/audio annotation</li>
+                  <li><i class="bx bx-check"></i> Quality control process</li>
+                  <li><i class="bx bx-check"></i> Detailed reports</li>
+                  <li><i class="bx bx-check"></i> Multiple formats support</li>
+                  <li><i class="bx bx-check"></i> Validation checks</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Enterprise Data Hub</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">600</span>
+                  <span class="plus">+</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 10–20 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Full data pipeline setup</li>
+                  <li><i class="bx bx-check"></i> Collection & annotation</li>
+                  <li><i class="bx bx-check"></i> Validation system</li>
+                  <li><i class="bx bx-check"></i> Structured delivery</li>
+                  <li><i class="bx bx-check"></i> AI team ready</li>
+                  <li><i class="bx bx-check"></i> Documentation included</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research & Thesis Support -->
+      <div class="pricing-category">
+        <div class="category-header">
+          <i class="bx bx-book-open"></i>
+          <h3>🧠 Research & Thesis Support</h3>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Research Assist</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">150</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 5–7 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Topic consultation</li>
+                  <li><i class="bx bx-check"></i> Literature review</li>
+                  <li><i class="bx bx-check"></i> Dataset assistance</li>
+                  <li><i class="bx bx-check"></i> Methodology outline</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card featured">
+              <div class="badge">Most Popular</div>
+              <div class="card-header">
+                <h4>Paper Build Pro</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">300</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 10–15 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Experiment implementation</li>
+                  <li><i class="bx bx-check"></i> Result analysis</li>
+                  <li><i class="bx bx-check"></i> Paper drafting</li>
+                  <li><i class="bx bx-check"></i> Data visualization</li>
+                  <li><i class="bx bx-check"></i> Statistical analysis</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4">
+            <div class="pricing-card">
+              <div class="card-header">
+                <h4>Publication Ready+</h4>
+                <div class="price">
+                  <span class="currency">$</span>
+                  <span class="amount">600</span>
+                  <span class="plus">+</span>
+                </div>
+                <p class="delivery-time">
+                  <i class="bx bx-time-five"></i> 20–30 days delivery
+                </p>
+              </div>
+              <div class="card-body">
+                <ul class="features-list">
+                  <li><i class="bx bx-check"></i> Full publication support</li>
+                  <li><i class="bx bx-check"></i> Research design</li>
+                  <li><i class="bx bx-check"></i> Model development</li>
+                  <li><i class="bx bx-check"></i> Result visualization</li>
+                  <li><i class="bx bx-check"></i> Manuscript preparation</li>
+                  <li><i class="bx bx-check"></i> Submission assistance</li>
+                </ul>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Projects -->
+      <div class="custom-projects">
+        <div class="custom-content">
+          <i class="bx bx-chat"></i>
+          <h3>Need Something Different?</h3>
+          <p>Every project is unique. Let's discuss your requirements and build the perfect solution together.</p>
+          <a href="#contacts" class="custom-btn">Get In Touch</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Pricing Plans Section -->
+
   <!-- Start Contact Section -->
 
   <section id="contacts" class="contact">
     <div class="container">
 
       <div class="section-title">
-        <h2>Contact</h2>
+        <h2>Get In Touch</h2>
+        <p>Let's Work Together</p>
       </div>
 
-      <div class="row mt-2">
+      <!-- Contact Form Anchor -->
+      <div id="contact-form-section"></div>
 
-        <div class="col-md-6 d-flex align-items-stretch">
+      <div class="row">
+        <!-- Contact Information Cards -->
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="info-box">
             <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>Arambagh AGB Colony (Hospital Zone)</p>
-            <p>Motijheel</p>
-            <p>Dhaka</p>
+            <h3>Location</h3>
+            <p>Arambagh AGB Colony<br>(Hospital Zone)<br>Motijheel, Dhaka, Bangladesh</p>
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-          <a href="https://www.linkedin.com/in/al-abid/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.facebook.com/alabidcse/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://x.com/mr_alabidS" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.instagram.com/mr.alabid/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <i class="bx bx-envelope"></i>
+            <h3>Email Address</h3>
+            <p><a href="mailto:mdalabidsupto@gmail.com">mdalabidsupto@gmail.com</a></p>
+            <p><a href="mailto:1921719@iub.edu.bd">1921719@iub.edu.bd</a></p>
+          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Phone Number</h3>
+            <p><a href="tel:+8801742314777">+880 1742 314777</a></p>
+            <p>Available: 9 AM - 9 PM (GMT+6)</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
+      <!-- Contact Form -->
+      <div class="row mt-5" id="contact-form">
+        <div class="col-lg-12">
+          <div class="contact-form-wrapper">
+            <div class="form-header">
+              <h3>Send Me a Message</h3>
+              <p>Have a project in mind? Fill out the form below and I'll get back to you within 24 hours.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="modern-contact-form" id="contactForm">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="input-wrapper">
+                    <i class="bx bx-user"></i>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 form-group">
+                  <div class="input-wrapper">
             <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>mdalabidsupto@gmail.com</p>
-            <p>1921719@iub.edu.bd</p>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" required>
           </div>
         </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Contact</h3>
-            <p>+880 1742314777</p>
+          </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <div class="input-wrapper">
+                    <i class="bx bx-phone"></i>
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone Number (Optional)">
+        </div>
+      </div>
+
+                <div class="col-md-6 form-group">
+                  <div class="input-wrapper">
+                    <i class="bx bx-briefcase"></i>
+                    <select class="form-control" name="service" id="service" required>
+                      <option value="">Select Service Type</option>
+                      <option value="web-development">Full-Stack Web Development</option>
+                      <option value="ai-chatbot">AI & Chatbot Solutions</option>
+                      <option value="data-annotation">Data Collection & Annotation</option>
+                      <option value="research">Research & Thesis Support</option>
+                      <option value="custom">Custom Project</option>
+                      <option value="other">Other Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-wrapper">
+                  <i class="bx bx-edit"></i>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="bx bx-message-detail"></i>
+                  <textarea class="form-control" name="message" rows="6" id="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+                </div>
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                <label class="form-check-label" for="agreeTerms">
+                  I agree to be contacted regarding my inquiry
+                </label>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="submit-btn">
+                  <span>Send Message</span>
+                  <i class="bx bx-send"></i>
+                </button>
+              </div>
+
+              <div class="form-messages">
+                <div class="success-message" style="display: none;">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Thank you! Your message has been sent successfully. I'll get back to you soon.</p>
+                </div>
+                <div class="error-message" style="display: none;">
+                  <i class="bx bx-error-circle"></i>
+                  <p>Oops! Something went wrong. Please try again or email me directly.</p>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
+
+      <!-- Google Maps Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div class="map-section">
+            <div class="map-header">
+              <i class="bx bx-map-pin"></i>
+              <h3>Find Me Here</h3>
+              <p>Visit me at my location in Dhaka, Bangladesh</p>
+            </div>
+            <div class="map-wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3526992167376!2d90.41917017511466!3d23.734798978681052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8435afbf2bf%3A0x9b0f1511edf88e73!2sAGB%20Colony%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1761366388787!5m2!1sen!2sbd" 
+                      width="100%" 
+                      height="450" 
+                      style="border:0;" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Al Abid Supto Location - AGB Colony, Dhaka, Bangladesh">
+              </iframe>
+              <div class="map-overlay">
+                <div class="map-info">
+                  <i class="bx bx-current-location"></i>
+                  <div>
+                    <h4>My Location</h4>
+                    <p>AGB Colony, Motijheel, Dhaka</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div class="social-connect">
+            <h3>Connect With Me</h3>
+            <p>Follow me on social media for updates and insights</p>
+            <div class="social-links-large">
+              <a href="https://www.linkedin.com/in/al-abid/" target="_blank" class="linkedin" title="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/mrabid" target="_blank" class="github" title="GitHub">
+                <i class="bx bxl-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://scholar.google.com/citations?user=wnmLQr0AAAAJ&hl=en" target="_blank" class="scholar" title="Google Scholar">
+                <i class="bx bxl-google"></i>
+                <span>Scholar</span>
+              </a>
+              <a href="https://www.facebook.com/alabidcse/" target="_blank" class="facebook" title="Facebook">
+                <i class="bx bxl-facebook"></i>
+                <span>Facebook</span>
+              </a>
+              <a href="https://x.com/mr_alabidS" target="_blank" class="twitter" title="Twitter">
+                <i class="bx bxl-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="https://www.instagram.com/mr.alabid/" target="_blank" class="instagram" title="Instagram">
+                <i class="bx bxl-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -717,14 +1249,87 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
+    <div class="footer-top">
     <div class="container">
+        <div class="row">
+          
+          <!-- About Column -->
+          <div class="col-lg-4 col-md-6 footer-about">
+            <h3>Al Abid Supto</h3>
+            <p>
+              Software Engineer, Researcher, and AI Enthusiast passionate about building innovative solutions 
+              and contributing to cutting-edge research in Machine Learning and Natural Language Processing.
+            </p>
+            <div class="footer-social-links">
+              <a href="https://www.linkedin.com/in/al-abid/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/mrabid" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+              <a href="https://scholar.google.com/citations?user=wnmLQr0AAAAJ&hl=en" target="_blank" class="scholar"><i class="bx bxl-google"></i></a>
+              <a href="https://www.facebook.com/alabidcse/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://x.com/mr_alabidS" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/mr.alabid/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero-main">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Skills</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Projects</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#publication">Publications</a></li>
+            </ul>
+          </div>
+
+          <!-- Services Column -->
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>My Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">AI & Chatbot Solutions</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Data Annotation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Research Support</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contacts">Custom Projects</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info Column -->
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Info</h4>
+            <p>
+              <i class="bx bx-map"></i> Motijheel, Dhaka<br>
+              Bangladesh<br><br>
+              <i class="bx bx-phone"></i> <a href="tel:+8801742314777">+880 1742 314777</a><br>
+              <i class="bx bx-envelope"></i> <a href="mailto:mdalabidsupto@gmail.com">mdalabidsupto@gmail.com</a><br>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
       <div class="copyright">
-        &copy; Copyright <strong><span>Al Abid Supto</span></strong>. All Rights Reserved &copy;2021
+              &copy; 2021-<span id="currentYear"></span> <strong>Al Abid Supto</strong>. All Rights Reserved
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-menu">
+              <a href="#hero-main">Privacy Policy</a>
+              <a href="#hero-main">Terms of Service</a>
+              <a href="#contacts">Support</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <a href="#hero-main" class="back-to-top" id="backToTop"><i class="bx bx-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -739,7 +1344,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["Software Engineer", "Researcher","AI Enthusiast","Coder"],
+      strings: ["Full-Stack Developer", "AI/ML Engineer", "Research", "Data Specialist"],
       loop: true,
       typeSpeed: 65,
       backSpeed: 65
@@ -748,6 +1353,163 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Footer Year Update -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Back to Top Button Script -->
+  <script>
+    // Back to Top Button Functionality
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('backToTop');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top when clicked
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    
+    themeToggle.addEventListener('click', function() {
+      let theme = document.documentElement.getAttribute('data-theme');
+      
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      
+      // Add animation class
+      themeToggle.classList.add('rotating');
+      setTimeout(() => {
+        themeToggle.classList.remove('rotating');
+      }, 500);
+    });
+
+    // Smooth theme transition on page load
+    window.addEventListener('load', function() {
+      document.body.classList.add('theme-loaded');
+    });
+
+    // Fix hash navigation issue - prevent auto-scroll to contact on reload
+    window.addEventListener('load', function() {
+      // If there's a hash in the URL, clear it to prevent unwanted scrolling
+      if (window.location.hash && window.location.hash === '#contacts') {
+        // Only clear if it's the contacts hash that might cause issues
+        history.replaceState(null, null, window.location.pathname);
+        // Scroll to top instead
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  </script>
+
+  <!-- Service Type Auto-fill Function -->
+  <script>
+    function fillServiceType(service) {
+      // Clear any existing hash to prevent auto-scroll on reload
+      if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+      }
+      
+      // Scroll to contact form directly
+      const formSection = document.getElementById('contact-form');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      
+      // Wait for scroll, then fill the service type
+      setTimeout(() => {
+        const serviceSelect = document.getElementById('service');
+        if (serviceSelect) {
+          serviceSelect.value = service;
+          // Add a highlight effect
+          serviceSelect.style.borderColor = '#5a67d8';
+          serviceSelect.focus();
+          setTimeout(() => {
+            serviceSelect.style.borderColor = '';
+          }, 2000);
+        }
+      }, 800);
+    }
+  </script>
+
+  <!-- Contact Form Handler -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show loading state
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span>Sending...</span><i class="bx bx-loader-alt bx-spin"></i>';
+      submitBtn.disabled = true;
+      
+      // Get form data
+      const formData = new FormData(this);
+      
+      // Replace YOUR_FORM_ID with your actual Formspree form ID
+      // Or use your own backend endpoint
+      fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show success message
+          document.querySelector('.success-message').style.display = 'block';
+          document.querySelector('.error-message').style.display = 'none';
+          this.reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            document.querySelector('.success-message').style.display = 'none';
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        // Show error message
+        document.querySelector('.error-message').style.display = 'block';
+        document.querySelector('.success-message').style.display = 'none';
+        
+        // Hide error message after 5 seconds
+        setTimeout(() => {
+          document.querySelector('.error-message').style.display = 'none';
+        }, 5000);
+      })
+      .finally(() => {
+        // Restore button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
+    });
+  </script>
 
 </body>
 
