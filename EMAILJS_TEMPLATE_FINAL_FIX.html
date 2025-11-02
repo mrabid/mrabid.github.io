@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Contact Form Submission</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid #e6e9f0;
+    }
+    .header {
+      background: #0078ff;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .content {
+      padding: 25px 30px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .content p {
+      margin: 8px 0;
+    }
+    .label {
+      font-weight: 600;
+      color: #0078ff;
+    }
+    .message-box {
+      background: #f4f7fb;
+      border-left: 4px solid #0078ff;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: #f1f4f9;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">📧 New Contact Form Submission</div>
+    <div class="content">
+      <p><span class="label">👤 Full Name:</span> {{from_name}}</p>
+      <p><span class="label">📧 Email:</span> {{from_email}}</p>
+      <p><span class="label">📱 Phone:</span> {{phone}}</p>
+      <p><span class="label">🎯 Service Type:</span> {{service_type}}</p>
+      <p><span class="label">📌 Subject:</span> {{subject}}</p>
+
+      <div class="message-box">
+        <p><strong>💬 Message:</strong></p>
+        <p>{{message}}</p>
+      </div>
+    </div>
+    <div class="footer">
+      This email was sent automatically from your website contact form.<br>
+      Reply to: <strong>{{from_email}}</strong>
+    </div>
+  </div>
+</body>
+</html>
+

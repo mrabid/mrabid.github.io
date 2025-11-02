@@ -9,7 +9,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
   <!-- End Google Tag Manager -->
-  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -837,7 +837,7 @@
                   <li><i class="bx bx-check"></i> PDF-based Q&A bot</li>
                   <li><i class="bx bx-check"></i> Basic conversation flow</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('ai-chatbot')">Get Started</a>
               </div>
             </div>
           </div>
@@ -864,7 +864,7 @@
                   <li><i class="bx bx-check"></i> Web integration</li>
                   <li><i class="bx bx-check"></i> Custom training</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('ai-chatbot')">Get Started</a>
               </div>
             </div>
           </div>
@@ -891,7 +891,7 @@
                   <li><i class="bx bx-check"></i> Full deployment</li>
                   <li><i class="bx bx-check"></i> Ongoing support</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('ai-chatbot')">Get Started</a>
               </div>
             </div>
           </div>
@@ -925,7 +925,7 @@
                   <li><i class="bx bx-check"></i> Format standardization</li>
                   <li><i class="bx bx-check"></i> ML project ready</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('data-annotation')">Get Started</a>
               </div>
             </div>
           </div>
@@ -951,7 +951,7 @@
                   <li><i class="bx bx-check"></i> Multiple formats support</li>
                   <li><i class="bx bx-check"></i> Validation checks</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('data-annotation')">Get Started</a>
               </div>
             </div>
           </div>
@@ -978,7 +978,7 @@
                   <li><i class="bx bx-check"></i> AI team ready</li>
                   <li><i class="bx bx-check"></i> Documentation included</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('data-annotation')">Get Started</a>
               </div>
             </div>
           </div>
@@ -1012,7 +1012,7 @@
                   <li><i class="bx bx-check"></i> Dataset assistance</li>
                   <li><i class="bx bx-check"></i> Methodology outline</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('research')">Get Started</a>
               </div>
             </div>
           </div>
@@ -1038,7 +1038,7 @@
                   <li><i class="bx bx-check"></i> Data visualization</li>
                   <li><i class="bx bx-check"></i> Statistical analysis</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('research')">Get Started</a>
               </div>
             </div>
           </div>
@@ -1065,7 +1065,7 @@
                   <li><i class="bx bx-check"></i> Manuscript preparation</li>
                   <li><i class="bx bx-check"></i> Submission assistance</li>
                 </ul>
-                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('web-development')">Get Started</a>
+                <a href="#contacts" class="pricing-btn" onclick="fillServiceType('research')">Get Started</a>
               </div>
             </div>
           </div>
@@ -1078,7 +1078,7 @@
           <i class="bx bx-chat"></i>
           <h3>Need Something Different?</h3>
           <p>Every project is unique. Let's discuss your requirements and build the perfect solution together.</p>
-          <a href="#contacts" class="custom-btn" onclick="fillServiceType('custom-project')">Get In Touch</a>
+          <a href="#contacts" class="custom-btn" onclick="fillServiceType('custom')">Get In Touch</a>
         </div>
       </div>
 
@@ -1136,9 +1136,8 @@
               <p>Have a project in mind? Fill out the form below and I'll get back to you within 24 hours.</p>
             </div>
             
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="modern-contact-form" id="contactForm">
-              <!-- TODO: Replace YOUR_FORM_ID with your actual Formspree form ID -->
-              <!-- Get your form ID from https://formspree.io/forms -->
+            <form class="modern-contact-form" id="contactForm">
+              <!-- EmailJS Integration - Service ID: service_qo4rofm, Template ID: template_nd6o7ss -->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <div class="input-wrapper">
@@ -1167,7 +1166,7 @@
                   <div class="input-wrapper">
                     <i class="bx bx-briefcase"></i>
                     <select class="form-control" name="service" id="service" required>
-                      <option value="">Select Service Type</option>
+                      <option value="" disabled selected>Select Service Type</option>
                       <option value="web-development">Full-Stack Web Development</option>
                       <option value="ai-chatbot">AI & Chatbot Solutions</option>
                       <option value="data-annotation">Data Collection & Annotation</option>
@@ -1384,12 +1383,17 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <!-- Waypoints removed - using Intersection Observer instead (see main.js) -->
+  <!-- CounterUp can work without waypoints for simple animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
       strings: ["Full-Stack Developer", "AI/ML Engineer", "Research", "Data Specialist"],
@@ -1488,9 +1492,23 @@
     });
   </script>
 
-  <!-- Service Type Auto-fill Function -->
+      <!-- Service Type Auto-fill Function -->
   <script>
     function fillServiceType(service) {
+      // Service value mapping - ensure correct mapping
+      const serviceMap = {
+        'web-development': 'web-development',
+        'ai-chatbot': 'ai-chatbot',
+        'data-annotation': 'data-annotation',
+        'research': 'research',
+        'custom': 'custom',
+        'custom-project': 'custom', // Map old value to new value
+        'other': 'other'
+      };
+      
+      // Get mapped service value
+      const mappedService = serviceMap[service] || service;
+      
       // Clear any existing hash to prevent auto-scroll on reload
       if (window.location.hash) {
         history.replaceState(null, null, window.location.pathname);
@@ -1527,7 +1545,29 @@
         setTimeout(() => {
           const serviceSelect = document.getElementById('service');
           if (serviceSelect) {
-            serviceSelect.value = service;
+            // Set the mapped service value
+            serviceSelect.value = mappedService;
+            
+            // Verify the value was set correctly
+            if (serviceSelect.value !== mappedService) {
+              console.warn('Service value not found in dropdown:', mappedService);
+              // Try to find and set by text content
+              const options = serviceSelect.options;
+              for (let i = 0; i < options.length; i++) {
+                if (options[i].value === mappedService) {
+                  serviceSelect.selectedIndex = i;
+                  break;
+                }
+              }
+            }
+            
+            // Clear any custom validity (makes it :valid)
+            serviceSelect.setCustomValidity('');
+            
+            // Trigger change and input events to ensure form validation
+            serviceSelect.dispatchEvent(new Event('change', { bubbles: true }));
+            serviceSelect.dispatchEvent(new Event('input', { bubbles: true }));
+            
             serviceSelect.focus();
             
             // Add temporary highlight
@@ -1541,59 +1581,239 @@
     }
   </script>
 
-  <!-- Contact Form Handler -->
+  <!-- EmailJS Public Key Setup Script -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Show loading state
-      const submitBtn = this.querySelector('.submit-btn');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<span>Sending...</span><i class="bx bx-loader-alt bx-spin"></i>';
-      submitBtn.disabled = true;
-      
-      // Get form data
-      const formData = new FormData(this);
-      
-      // Replace YOUR_FORM_ID with your actual Formspree form ID
-      // Or use your own backend endpoint
-      fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          // Show success message
-          document.querySelector('.success-message').style.display = 'block';
-          document.querySelector('.error-message').style.display = 'none';
-          this.reset();
-          
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            document.querySelector('.success-message').style.display = 'none';
-          }, 5000);
+    // EmailJS Configuration
+    // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+    // Get it from: https://dashboard.emailjs.com/admin/integration
+    const EMAILJS_PUBLIC_KEY = "48J9Yj3KrrvXA0s2T"; // EmailJS Public Key configured
+    const EMAILJS_SERVICE_ID = "service_qo4rofm";
+    const EMAILJS_TEMPLATE_ID = "template_w5eh1y4";
+    
+    // Initialize EmailJS when ready
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof emailjs !== 'undefined') {
+        if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+          emailjs.init(EMAILJS_PUBLIC_KEY);
+          console.log('EmailJS initialized successfully');
         } else {
-          throw new Error('Form submission failed');
+          console.warn('⚠️ EmailJS Public Key not set! Please add your Public Key in the script above.');
         }
-      })
-      .catch(error => {
-        // Show error message
-        document.querySelector('.error-message').style.display = 'block';
-        document.querySelector('.success-message').style.display = 'none';
+      } else {
+        console.error('EmailJS SDK not loaded. Check your internet connection.');
+      }
+    });
+  </script>
+
+  <!-- Select Field Color Handler -->
+  <script>
+    // Handle select field color based on selection
+    document.addEventListener('DOMContentLoaded', function() {
+      const serviceSelect = document.getElementById('service');
+      
+      if (serviceSelect) {
+        // Function to update select field validation and color
+        function updateSelectValidation() {
+          const theme = document.documentElement.getAttribute('data-theme');
+          
+          // Force a re-check of validity
+          if (serviceSelect.value === '' || serviceSelect.value === null) {
+            serviceSelect.setCustomValidity('Please select a service type');
+            // Set placeholder color
+            if (theme === 'light') {
+              serviceSelect.style.color = 'rgba(26, 26, 46, 0.5)';
+            } else {
+              serviceSelect.style.color = 'rgba(255, 255, 255, 0.4)';
+            }
+          } else {
+            serviceSelect.setCustomValidity('');
+            // Set normal text color for selected value
+            serviceSelect.style.color = 'var(--text-color)';
+          }
+        }
         
-        // Hide error message after 5 seconds
-        setTimeout(() => {
+        // Update on page load
+        updateSelectValidation();
+        
+        // Update on change
+        serviceSelect.addEventListener('change', function() {
+          updateSelectValidation();
+          // Remove the custom validity message after selection
+          if (this.value !== '') {
+            this.setCustomValidity('');
+          }
+        });
+        
+        // Update on input (for programmatic changes)
+        serviceSelect.addEventListener('input', updateSelectValidation);
+        
+        // Also update when theme changes
+        const themeObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+              updateSelectValidation();
+            }
+          });
+        });
+        
+        themeObserver.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['data-theme']
+        });
+      }
+    });
+  </script>
+
+  <!-- EmailJS Contact Form Handler -->
+  <script>
+    // Wait for DOM and EmailJS to be ready
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Check if EmailJS is properly configured
+          if (typeof emailjs === 'undefined') {
+            showError('EmailJS SDK is not loaded. Please check your internet connection and try again.');
+            return;
+          }
+          
+          if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
+            showError('EmailJS is not configured. Please add your Public Key to enable form submissions.');
+            console.error('EmailJS Public Key not set. Add your Public Key to enable form submissions.');
+            return;
+          }
+          
+          // Show loading state
+          const submitBtn = this.querySelector('.submit-btn');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<span>Sending...</span><i class="bx bx-loader-alt bx-spin"></i>';
+          submitBtn.disabled = true;
+          
+          // Hide any previous messages
+          document.querySelector('.success-message').style.display = 'none';
           document.querySelector('.error-message').style.display = 'none';
-        }, 5000);
-      })
-      .finally(() => {
-        // Restore button
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      });
+          
+          // Validate required fields
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const service = document.getElementById('service').value;
+          const subject = document.getElementById('subject').value.trim();
+          const message = document.getElementById('message').value.trim();
+          
+          if (!name || !email || !service || !subject || !message) {
+            showError('Please fill in all required fields.');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+          
+          // Prepare email template parameters
+          const templateParams = {
+            from_name: name,
+            from_email: email,
+            phone: document.getElementById('phone').value.trim() || 'Not provided',
+            service_type: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+            subject: subject,
+            message: message,
+            to_email: 'mdalabidsupto@gmail.com'
+          };
+          
+          // Debug: Log what we're sending
+          console.log('📧 Sending email with parameters:', templateParams);
+          console.log('✅ Full Name:', templateParams.from_name);
+          console.log('✅ Email:', templateParams.from_email);
+          console.log('✅ Service Type:', templateParams.service_type);
+          
+          // Send email using EmailJS
+          emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+            .then(function(response) {
+              console.log('EmailJS Success!', response.status, response.text);
+              
+              // Show success message
+              document.querySelector('.success-message').style.display = 'block';
+              document.querySelector('.error-message').style.display = 'none';
+              contactForm.reset();
+              
+              // Scroll to success message for better UX
+              setTimeout(() => {
+                document.querySelector('.success-message').scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+              }, 100);
+              
+              // Hide success message after 8 seconds
+              setTimeout(() => {
+                document.querySelector('.success-message').style.display = 'none';
+              }, 8000);
+              
+              // Restore button state
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }, function(error) {
+              // Detailed error handling
+              console.error('EmailJS Error Details:', error);
+              
+              let errorMessage = 'Oops! Something went wrong. Please try again or email me directly at mdalabidsupto@gmail.com';
+              
+              // Provide specific error messages
+              if (error.text) {
+                if (error.text.includes('Invalid public key') || error.text.includes('public key')) {
+                  errorMessage = 'EmailJS configuration error: Public Key is invalid. Please check your EmailJS settings.';
+                } else if (error.text.includes('Template') || error.text.includes('template')) {
+                  errorMessage = 'Email template error: Template might not be created yet. Please check your EmailJS template configuration.';
+                } else if (error.text.includes('Service') || error.text.includes('service')) {
+                  errorMessage = 'Email service error: Service configuration might be incorrect. Please check your EmailJS service settings.';
+                } else {
+                  errorMessage = 'Error: ' + error.text + '. Please try again or contact me directly.';
+                }
+              } else if (error.status) {
+                if (error.status === 400) {
+                  errorMessage = 'Configuration Error: Please verify your EmailJS Public Key, Service ID, and Template ID are correct.';
+                } else if (error.status === 401) {
+                  errorMessage = 'Authentication Error: Your EmailJS Public Key is invalid. Please check your EmailJS dashboard.';
+                } else if (error.status === 404) {
+                  errorMessage = 'Not Found: EmailJS template or service not found. Please verify your Template ID and Service ID.';
+                }
+              }
+              
+              showError(errorMessage);
+              
+              // Restore button state
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            });
+        });
+      }
+      
+      // Helper function to show error messages
+      function showError(message) {
+        const errorDiv = document.querySelector('.error-message');
+        if (errorDiv) {
+          const errorParagraph = errorDiv.querySelector('p');
+          if (errorParagraph) {
+            errorParagraph.textContent = message;
+          }
+          errorDiv.style.display = 'block';
+          document.querySelector('.success-message').style.display = 'none';
+          
+          // Scroll to error message
+          setTimeout(() => {
+            errorDiv.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center' 
+            });
+          }, 100);
+          
+          // Hide error message after 10 seconds
+          setTimeout(() => {
+            errorDiv.style.display = 'none';
+          }, 10000);
+        }
+      }
     });
   </script>
 
