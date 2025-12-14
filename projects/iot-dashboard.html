@@ -1,0 +1,252 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Real Time IoT Data Visualization</title>
+  <meta content="Full-stack IoT monitoring dashboard for real-time sensor data visualization" name="description">
+  <meta content="IoT, Dashboard, React, Flask, Sensor Monitoring, Data Visualization" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .action-btn.secondary {
+      background: transparent;
+      border: 2px solid #14a085;
+      color: #14a085;
+      box-shadow: 0 4px 15px rgba(20, 160, 133, 0.2);
+      text-shadow: none;
+    }
+    .action-btn.secondary:hover {
+      background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+      color: #ffffff;
+      border-color: transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">🌐 Real Time IoT Data Visualization</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A full-stack IoT monitoring dashboard that visualizes real-time and historical sensor data using a React frontend and a Flask backend, designed for scalable device monitoring and data analysis.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong>🔧 Tech Stack</strong>: React, Vite, Chart.js, Flask, SQLAlchemy, SQLite</li>
+              <li><strong>🌍 Live Website</strong>: <a href="https://dashboard.iotexperience.com/" target="_blank" style="color:#12d640">dashboard.iotexperience.com</a></li>
+              <li><strong>🏢 Company</strong>: IoT eXperience, LLC</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🎯 Project Goal</h4>
+            <p>
+              The main goal of this project was to build a practical, end-to-end IoT data monitoring system that demonstrates real-time data handling, device management, and data visualization using modern frontend and backend technologies.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📋 Project Overview</h4>
+            <p>
+              This project is a full-stack IoT dashboard developed to monitor and analyze sensor data from multiple IoT devices. The frontend is built with <strong style="color:#fff">React</strong> and <strong style="color:#fff">Vite</strong>, providing a responsive and interactive user interface with dynamic charts powered by <strong style="color:#fff">Chart.js</strong>. The backend is implemented using <strong style="color:#fff">Flask</strong> and <strong style="color:#fff">SQLAlchemy</strong>, responsible for handling API requests, managing devices, and storing sensor data in an <strong style="color:#fff">SQLite</strong> database.
+            </p>
+            <p>
+              The dashboard supports real-time sensor data visualization, device management, and historical data analysis, making it suitable as a foundation for real-world IoT monitoring systems used in smart environments, research, or industrial applications.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Key Features</h4>
+            <ul>
+              <li>📊 <strong style="color:#fff">Real-time temperature and humidity data visualization</strong></li>
+              <li>📈 <strong style="color:#fff">Interactive charts and data tables</strong></li>
+              <li>🖥️ <strong style="color:#fff">Device management interface</strong></li>
+              <li>📁 <strong style="color:#fff">Historical sensor data analysis</strong></li>
+              <li>🔗 <strong style="color:#fff">Clean REST API architecture</strong></li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🛠️ Technologies Used</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Frontend</h5>
+                <ul>
+                  <li>React</li>
+                  <li>Vite</li>
+                  <li>Chart.js</li>
+                </ul>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Backend</h5>
+                <ul>
+                  <li>Flask</li>
+                  <li>SQLAlchemy</li>
+                </ul>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Database</h5>
+                <ul>
+                  <li>SQLite</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "This dashboard serves as a foundation for real-world IoT monitoring systems, suitable for smart environments, research laboratories, or industrial applications requiring scalable device monitoring and data analysis."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://dashboard.iotexperience.com/" target="_blank" class="action-btn">🌐 Visit Dashboard</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>

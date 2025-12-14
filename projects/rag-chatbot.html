@@ -1,0 +1,324 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RAG Chatbot for Financial Policies</title>
+  <meta content="AI-powered RAG chatbot for financial policy document Q&A" name="description">
+  <meta content="RAG, Chatbot, AI, NLP, Python, ChromaDB, FAISS, Gradio" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .tech-item {
+      background: rgba(18, 214, 64, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(18, 214, 64, 0.2);
+    }
+    .tech-item .name {
+      font-size: 0.95rem;
+      color: #12d640;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tech-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .tech-item ul li {
+      padding: 3px 0;
+      font-size: 0.9rem;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .module-item {
+      background: rgba(18, 214, 64, 0.05);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 3px solid #12d640;
+    }
+    .module-item .title {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .module-item .desc {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">🤖 RAG Chatbot for Financial Policies</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              An AI-powered Retrieval-Augmented Generation (RAG) chatbot that answers questions from financial policy documents with page/section citations. Built with Python, ChromaDB, Sentence Transformers, and Gradio for interactive Q&A.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong style="color:#fff">🔧 Tech Stack</strong>: Python, ChromaDB, FAISS, Sentence Transformers, Gradio</li>
+              <li><strong style="color:#fff">💻 GitHub</strong>: <a href="https://github.com/mrabid/rag-chatbot-for-policies" target="_blank" style="color:#12d640">View Repository</a></li>
+              <li><strong style="color:#fff">📌 Type</strong>: AI/ML Application</li>
+              <li><strong style="color:#fff">🎯 Domain</strong>: Natural Language Processing, RAG Systems</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📋 Project Overview</h4>
+            <p>
+              ChatBot_Financial is an intelligent chatbot designed to help users query financial policy documents and receive accurate answers with precise citations. Using <strong style="color:#fff">Retrieval-Augmented Generation (RAG)</strong> architecture, the system combines document retrieval with language understanding to provide contextually relevant responses.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🚀 Key Technologies</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="name">AI & ML</div>
+                <ul>
+                  <li>Sentence Transformers</li>
+                  <li>RAG Architecture</li>
+                  <li>Embedding Generation</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Vector Database</div>
+                <ul>
+                  <li>ChromaDB</li>
+                  <li>FAISS Index</li>
+                  <li>Similarity Search</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Interface</div>
+                <ul>
+                  <li>Gradio UI</li>
+                  <li>Jupyter Notebook</li>
+                  <li>Command Line</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📁 Project Architecture</h4>
+            <div class="module-grid">
+              <div class="module-item">
+                <div class="title">📄 document_loader.py</div>
+                <div class="desc">Loads documents, primarily PDFs for processing</div>
+              </div>
+              <div class="module-item">
+                <div class="title">✂️ text_splitter.py</div>
+                <div class="desc">Breaks documents into smaller, manageable chunks</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🔢 embedding_generator.py</div>
+                <div class="desc">Converts text into numerical embeddings</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🗄️ vector_store.py</div>
+                <div class="desc">Manages FAISS vector store for retrieval</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🔍 query_processor.py</div>
+                <div class="desc">Processes user questions and fetches answers</div>
+              </div>
+              <div class="module-item">
+                <div class="title">💬 conversation_manager.py</div>
+                <div class="desc">Manages chatbot memory and conversation flow</div>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Key Features</h4>
+            <ul>
+              <li>📚 <strong style="color:#fff">Document Q&A</strong> - Ask questions about financial policy documents</li>
+              <li>📍 <strong style="color:#fff">Page/Section Citations</strong> - Answers include precise source references</li>
+              <li>🧠 <strong style="color:#fff">RAG Architecture</strong> - Combines retrieval with generation for accuracy</li>
+              <li>🔍 <strong style="color:#fff">Semantic Search</strong> - FAISS-powered efficient similarity search</li>
+              <li>💬 <strong style="color:#fff">Interactive UI</strong> - Gradio-based web interface for easy interaction</li>
+              <li>📓 <strong style="color:#fff">Jupyter Support</strong> - Notebook for development and testing</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🛠️ How It Works</h4>
+            <ul>
+              <li><strong style="color:#fff">1. Document Loading</strong> - PDF documents are loaded and processed</li>
+              <li><strong style="color:#fff">2. Text Chunking</strong> - Documents split into smaller chunks for better retrieval</li>
+              <li><strong style="color:#fff">3. Embedding Generation</strong> - Text converted to vector embeddings</li>
+              <li><strong style="color:#fff">4. Index Storage</strong> - Embeddings stored in FAISS index for fast retrieval</li>
+              <li><strong style="color:#fff">5. Query Processing</strong> - User questions processed and relevant chunks retrieved</li>
+              <li><strong style="color:#fff">6. Response Generation</strong> - AI generates answers with citations</li>
+            </ul>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "An intelligent RAG system that transforms how users interact with complex financial documents, providing accurate answers with verifiable citations for enhanced trust and transparency."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://github.com/mrabid/rag-chatbot-for-policies" target="_blank" class="action-btn">💻 View on GitHub</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
+

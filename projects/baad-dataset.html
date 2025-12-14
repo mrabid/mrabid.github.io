@@ -1,0 +1,291 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BAAD: Bangla Abusive Audio Dataset - Research Project</title>
+  <meta content="BAAD - A multipurpose dataset for automatic Bangla offensive speech recognition" name="description">
+  <meta content="Bangla, Speech Recognition, NLP, Dataset, Machine Learning, Audio" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .action-btn.secondary {
+      background: transparent;
+      border: 2px solid #14a085;
+      color: #14a085;
+      box-shadow: 0 4px 15px rgba(20, 160, 133, 0.2);
+      text-shadow: none;
+    }
+    .action-btn.secondary:hover {
+      background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+      color: #ffffff;
+      border-color: transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .stat-item {
+      background: rgba(18, 214, 64, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgba(18, 214, 64, 0.2);
+    }
+    .stat-item .number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      display: block;
+    }
+    .stat-item .label {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">🎙️ BAAD: A Multipurpose Dataset for Automatic Bangla Offensive Speech Recognition</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A comprehensive speech dataset of Bengali Abusive Words designed to advance automatic slang speech recognition for the Bangla language.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong style="color:#fff">📚 Type</strong>: Research Paper & Dataset</li>
+              <li><strong style="color:#fff">🏛️ Institution</strong>: DIU NLP LAB</li>
+              <li><strong style="color:#fff">📅 Timeline</strong>: June 2021 - October 2022</li>
+              <li><strong style="color:#fff">📖 Published In</strong>: Data in Brief (Elsevier)</li>
+              <li><strong style="color:#fff">🔗 Paper Link</strong>: <a href="https://www.sciencedirect.com/science/article/pii/S2352340923001853" target="_blank" style="color:#12d640">ScienceDirect</a></li>
+              <li><strong style="color:#fff">💻 GitHub</strong>: <a href="https://github.com/mrabid/AUDIO-Split-Code" target="_blank" style="color:#12d640">AUDIO-Split-Code</a></li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📊 Dataset Statistics</h4>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="number">114</span>
+                <span class="label">Slang Words</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">43</span>
+                <span class="label">Non-Slang Words</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">6,100</span>
+                <span class="label">Audio Clips</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">60+</span>
+                <span class="label">Native Speakers</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">20+</span>
+                <span class="label">Districts Covered</span>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📝 Abstract</h4>
+            <p>
+              In spite of being the fifth most spoken native language in the world, Bangla has barely received any attention in the domain of audio and speech recognition. This article represents a speech dataset of Bengali Abusive Words with some non-abusive words which are very close to the abusive ones.
+            </p>
+            <p>
+              In this work, a multipurpose dataset is presented to recognize automatic slang speech for Bangla language, which was prepared by collection, annotation, and refinement of data. It consists of <strong style="color:#fff">114 slang words</strong> and <strong style="color:#fff">43 non-slang words</strong> with <strong style="color:#fff">6,100 audio clips</strong>.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🎯 Data Collection Process</h4>
+            <ul>
+              <li>👥 <strong style="color:#fff">60 native speakers</strong> participated for slang word collection</li>
+              <li>👥 <strong style="color:#fff">23 native speakers</strong> participated for non-abusive words</li>
+              <li>🗣️ Speakers from <strong style="color:#fff">various dialects</strong> across <strong style="color:#fff">20+ districts</strong> of Bangladesh</li>
+              <li>📋 <strong style="color:#fff">10 university students</strong> participated in dataset evaluation, annotation, and refinements</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🔬 Research Applications</h4>
+            <ul>
+              <li>🤖 Develop <strong style="color:#fff">automatic Bengali slang speech recognition</strong> systems</li>
+              <li>📊 Serve as a <strong style="color:#fff">new benchmark</strong> for speech recognition-based ML models</li>
+              <li>🔊 Simulate <strong style="color:#fff">real-world scenarios</strong> using background noise in the dataset</li>
+              <li>🧹 Option to <strong style="color:#fff">remove background noise</strong> for clean audio processing</li>
+              <li>📈 Dataset can be <strong style="color:#fff">enriched further</strong> for extended research</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Key Contributions</h4>
+            <ul>
+              <li>🌐 <strong style="color:#fff">First comprehensive Bangla offensive speech dataset</strong></li>
+              <li>🎙️ <strong style="color:#fff">Multi-dialect audio collection</strong> from across Bangladesh</li>
+              <li>📝 <strong style="color:#fff">Carefully annotated and refined</strong> by expert evaluators</li>
+              <li>🔓 <strong style="color:#fff">Open-source code</strong> available on GitHub</li>
+              <li>📚 <strong style="color:#fff">Published in peer-reviewed journal</strong> (Data in Brief)</li>
+            </ul>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "Researchers can use this dataset to develop an automatic Bengali Slang speech recognition system, and also it can be used as a new benchmark for creating speech recognition-based machine learning models."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2352340923001853" target="_blank" class="action-btn">📖 Read Paper</a>
+              <a href="https://github.com/mrabid/AUDIO-Split-Code" target="_blank" class="action-btn secondary">💻 View Code</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
+

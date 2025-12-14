@@ -1,0 +1,340 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Modern Coaching & Mentoring System</title>
+  <meta content="A comprehensive web-based platform for mentor-mentee connections" name="description">
+  <meta content="Laravel, Vue.js, Coaching, Mentoring, Web Application" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .action-btn.secondary {
+      background: transparent;
+      border: 2px solid #14a085;
+      color: #14a085;
+      box-shadow: 0 4px 15px rgba(20, 160, 133, 0.2);
+      text-shadow: none;
+    }
+    .action-btn.secondary:hover {
+      background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+      color: #ffffff;
+      border-color: transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .tech-item {
+      background: rgba(18, 214, 64, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(18, 214, 64, 0.2);
+    }
+    .tech-item .name {
+      font-size: 0.95rem;
+      color: #12d640;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tech-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .tech-item ul li {
+      padding: 3px 0;
+      font-size: 0.9rem;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .feature-item {
+      background: rgba(18, 214, 64, 0.05);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 3px solid #12d640;
+    }
+    .feature-item .title {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .feature-item .desc {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">🎓 Modern Coaching & Mentoring System</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A comprehensive web-based platform designed to facilitate seamless connections between mentors and mentees, enabling effective knowledge transfer and professional development.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong style="color:#fff">🔧 Tech Stack</strong>: Laravel 10.x, Vue.js, TailwindCSS, MySQL, Redis, WebSocket</li>
+              <li><strong style="color:#fff">💻 GitHub</strong>: <a href="https://github.com/mrabid/Modern_Coaching_Mentoring_System" target="_blank" style="color:#12d640">View Repository</a></li>
+              <li><strong style="color:#fff">📌 Type</strong>: Full-Stack Web Application</li>
+              <li><strong style="color:#fff">👨‍💻 Role</strong>: Lead Developer</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🌟 Key Features</h4>
+            <div class="feature-grid">
+              <div class="feature-item">
+                <div class="title">🤖 Smart Mentor Matching</div>
+                <div class="desc">AI-powered algorithm to match mentees with the most suitable mentors</div>
+              </div>
+              <div class="feature-item">
+                <div class="title">📊 Interactive Dashboard</div>
+                <div class="desc">Real-time progress tracking and goal management</div>
+              </div>
+              <div class="feature-item">
+                <div class="title">📅 Scheduling System</div>
+                <div class="desc">Automated calendar integration for session management</div>
+              </div>
+              <div class="feature-item">
+                <div class="title">📚 Resource Library</div>
+                <div class="desc">Curated learning materials and development resources</div>
+              </div>
+              <div class="feature-item">
+                <div class="title">📈 Progress Tracking</div>
+                <div class="desc">Comprehensive analytics and milestone tracking</div>
+              </div>
+              <div class="feature-item">
+                <div class="title">🎥 Video Conferencing</div>
+                <div class="desc">Built-in video chat functionality for remote sessions</div>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🚀 Technologies Used</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="name">Frontend</div>
+                <ul>
+                  <li>Laravel Blade / Vue.js</li>
+                  <li>TailwindCSS</li>
+                  <li>Alpine.js</li>
+                  <li>LiveWire</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Backend</div>
+                <ul>
+                  <li>Laravel 10.x</li>
+                  <li>MySQL / PostgreSQL</li>
+                  <li>Redis for caching</li>
+                  <li>WebSocket for real-time</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Infrastructure</div>
+                <ul>
+                  <li>Docker</li>
+                  <li>AWS / Digital Ocean</li>
+                  <li>CI/CD with GitHub Actions</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">👨‍🏫 For Mentors</h4>
+            <ul>
+              <li>📝 <strong style="color:#fff">Profile creation</strong> and expertise highlighting</li>
+              <li>📅 <strong style="color:#fff">Session scheduling</strong> and management</li>
+              <li>📤 <strong style="color:#fff">Resource sharing</strong> and progress tracking</li>
+              <li>📊 <strong style="color:#fff">Performance analytics</strong> dashboard</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">👨‍🎓 For Mentees</h4>
+            <ul>
+              <li>🔍 <strong style="color:#fff">Mentor discovery</strong> and matching</li>
+              <li>🎯 <strong style="color:#fff">Goal setting</strong> and tracking</li>
+              <li>📅 <strong style="color:#fff">Session booking</strong> and management</li>
+              <li>📚 <strong style="color:#fff">Learning resource</strong> access</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📋 Prerequisites</h4>
+            <ul>
+              <li>PHP >= 8.1</li>
+              <li>Composer</li>
+              <li>Node.js >= 16.x</li>
+              <li>MySQL >= 8.0</li>
+              <li>Redis Server</li>
+              <li>Git</li>
+            </ul>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "A comprehensive platform that bridges the gap between mentors and mentees, enabling effective knowledge transfer and fostering professional growth through AI-powered matching and real-time collaboration tools."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://github.com/mrabid/Modern_Coaching_Mentoring_System" target="_blank" class="action-btn">💻 View on GitHub</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
+
