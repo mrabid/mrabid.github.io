@@ -1,0 +1,333 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Chuti Resort Gazipur - Dynamic Website</title>
+  <meta content="Dynamic resort website for Chuti Resort Gazipur built with Next.js 13 and PostgreSQL" name="description">
+  <meta content="Chuti Resort, Next.js, React, PostgreSQL, Dynamic Website, Railway, Full-Stack" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .tech-item {
+      background: rgba(18, 214, 64, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(18, 214, 64, 0.2);
+    }
+    .tech-item .name {
+      font-size: 0.95rem;
+      color: #12d640;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tech-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .tech-item ul li {
+      padding: 3px 0;
+      font-size: 0.9rem;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .module-item {
+      background: rgba(18, 214, 64, 0.05);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 3px solid #12d640;
+    }
+    .module-item .title {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .module-item .desc {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">🏨 Chuti Resort Gazipur - Dynamic Website</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A dynamic, content-managed resort website for Chuti Resort Gazipur, built with Next.js 13 (App Router) and PostgreSQL. The site serves dynamic content from a database and is deployed on Railway.com with automated CI/CD from GitHub.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong style="color:#fff">🔧 Tech Stack</strong>: Next.js 13, React 18, Node.js, PostgreSQL, Sass, Bootstrap</li>
+              <li><strong style="color:#fff">🌍 Live Website</strong>: <a href="https://chutiresort.com/" target="_blank" style="color:#12d640">chutiresort.com</a></li>
+              <li><strong style="color:#fff">📌 Type</strong>: Dynamic Full-Stack Web Application</li>
+              <li><strong style="color:#fff">👨‍💻 Role</strong>: Full-Stack Developer</li>
+              <li><strong style="color:#fff">☁️ Deployment</strong>: Railway.com (Auto-deploy from GitHub)</li>
+              <li><strong style="color:#fff">🏢 Client</strong>: Chuti Resort Ltd. (Part of Chuti Group)</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📋 Project Overview</h4>
+            <p>
+              Chuti Resort Gazipur is a premier eco-resort located just 18 km from Dhaka Airport, nestled in the lush greenery of Sukundi village on 54 bigha of land. The website serves as the resort's complete digital presence — showcasing accommodations, activities, dining, conference facilities, and booking information to potential guests.
+            </p>
+            <p>
+              Unlike a static website, this project is built as a <strong style="color:#fff">fully dynamic application</strong> using Next.js 13 with the App Router. All website content — banners, sections, room details, activity descriptions — is stored in a <strong style="color:#fff">PostgreSQL database</strong> and fetched dynamically via internal API routes. This means the resort team can update content without touching any code.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🚀 Tech Stack</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="name">Frontend</div>
+                <ul>
+                  <li>Next.js 13 (App Router)</li>
+                  <li>React 18</li>
+                  <li>Sass & Bootstrap</li>
+                  <li>Swiper.js (Carousels)</li>
+                  <li>React Photo Album</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Backend</div>
+                <ul>
+                  <li>Next.js API Routes</li>
+                  <li>Node.js Runtime</li>
+                  <li>Server-Side Rendering</li>
+                  <li>Dynamic Data Fetching</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Database & Deployment</div>
+                <ul>
+                  <li>PostgreSQL (pg pool)</li>
+                  <li>Railway.com (PaaS)</li>
+                  <li>GitHub CI/CD</li>
+                  <li>Auto-deployment</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📁 Architecture & Data Flow</h4>
+            <div class="module-grid">
+              <div class="module-item">
+                <div class="title">🗄️ Database Layer</div>
+                <div class="desc">PostgreSQL database stores all website content — banners, sections, room details, and activity info using a structured content table</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🔌 API Routes</div>
+                <div class="desc">Next.js server-side API routes handle content fetching, content updates, and file upload operations</div>
+              </div>
+              <div class="module-item">
+                <div class="title">📄 Dynamic Pages</div>
+                <div class="desc">Pages are rendered dynamically (force-dynamic) fetching fresh content from the database on every request</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🖼️ Media Management</div>
+                <div class="desc">File upload system for managing resort images, room photos, and promotional banners</div>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Key Features</h4>
+            <ul>
+              <li>🌐 <strong style="color:#fff">Fully Dynamic Content</strong> — All website content served from PostgreSQL, easily updatable without code changes</li>
+              <li>🏠 <strong style="color:#fff">Room Showcases</strong> — Detailed pages for all accommodation types (Family Cottage, Executive Suite, Royal Suite, Duplex Villa, and more)</li>
+              <li>🎯 <strong style="color:#fff">Activity Highlights</strong> — Nature & Outdoor, Kids Zone, Pool Area, Conference Hall, Restaurant, and more</li>
+              <li>📱 <strong style="color:#fff">Responsive Design</strong> — Optimized for all screen sizes with Bootstrap and custom Sass styling</li>
+              <li>🖼️ <strong style="color:#fff">Image Galleries</strong> — Beautiful photo albums and carousels powered by Swiper.js and React Photo Album</li>
+              <li>📊 <strong style="color:#fff">Server-Side Rendering</strong> — Next.js SSR ensures fast page loads and SEO-friendly content</li>
+              <li>🔄 <strong style="color:#fff">Content Management API</strong> — Internal API routes for fetching and updating website content dynamically</li>
+              <li>📤 <strong style="color:#fff">File Upload System</strong> — Dedicated upload endpoint for managing resort media assets</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">☁️ Deployment & CI/CD</h4>
+            <p>
+              The application is deployed on <strong style="color:#fff">Railway.com</strong> with the Next.js app and PostgreSQL database running as separate services. The project is connected to GitHub with <strong style="color:#fff">automatic deployment</strong> — every push to the main branch triggers an automatic rebuild and redeploy, ensuring the live site is always up-to-date with the latest changes.
+            </p>
+            <ul>
+              <li>🚀 <strong style="color:#fff">Auto-deployment</strong> — Git push to main triggers automatic rebuild and deploy on Railway</li>
+              <li>🏗️ <strong style="color:#fff">Multi-service setup</strong> — Next.js app and PostgreSQL database as separate Railway services</li>
+              <li>🌐 <strong style="color:#fff">Custom domain</strong> — Production site served at <a href="https://chutiresort.com/" target="_blank" style="color:#12d640">chutiresort.com</a></li>
+              <li>⚡ <strong style="color:#fff">Optimized builds</strong> — Next.js production build with optimized static assets</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🔗 Part of Chuti Group Ecosystem</h4>
+            <p>
+              This project is part of the broader Chuti Group digital portfolio. Chuti Resort Gazipur has been providing world-class eco-lifestyle and hospitality services since 2012, and this website serves as its primary digital gateway — welcoming guests into a green kingdom of fun, relaxation, and togetherness.
+            </p>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "A fully dynamic resort website that combines the power of Next.js 13 and PostgreSQL to deliver a content-managed, SEO-optimized, visually stunning digital experience — deployed with automated CI/CD on Railway.com for seamless updates and reliability."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://chutiresort.com/" target="_blank" class="action-btn">🌐 Visit Website</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
+

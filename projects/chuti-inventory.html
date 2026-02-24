@@ -1,0 +1,340 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Chuti Group Inventory Management System</title>
+  <meta content="Full-stack inventory management web application for Chuti Group built with React and Django REST API" name="description">
+  <meta content="Inventory Management, React, Django, REST API, PostgreSQL, Railway, Full-Stack" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .tech-item {
+      background: rgba(18, 214, 64, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(18, 214, 64, 0.2);
+    }
+    .tech-item .name {
+      font-size: 0.95rem;
+      color: #12d640;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .tech-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .tech-item ul li {
+      padding: 3px 0;
+      font-size: 0.9rem;
+    }
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .module-item {
+      background: rgba(18, 214, 64, 0.05);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 3px solid #12d640;
+    }
+    .module-item .title {
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .module-item .desc {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin: 0;
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">📦 Chuti Group Inventory Management System</h2>
+            
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A full-stack inventory management web application built for Chuti Group to streamline internal inventory tracking, user management, and service request workflows. The system features a React frontend and Django REST API backend, deployed on Railway.com with CI/CD auto-deployment from GitHub.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong style="color:#fff">🔧 Tech Stack</strong>: React 18, Vite, Django 6.0, Django REST Framework, PostgreSQL</li>
+              <li><strong style="color:#fff">🌍 Live Website</strong>: <a href="http://chutibd.com/" target="_blank" style="color:#12d640">chutibd.com</a></li>
+              <li><strong style="color:#fff">📌 Type</strong>: Full-Stack Web Application</li>
+              <li><strong style="color:#fff">👨‍💻 Role</strong>: Full-Stack Developer</li>
+              <li><strong style="color:#fff">☁️ Deployment</strong>: Railway.com (Auto-deploy from GitHub)</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📋 Project Overview</h4>
+            <p>
+              The Chuti Group Inventory Management System is a comprehensive web application designed to manage internal inventory operations for Chuti Group. It provides a centralized platform where authorized users can track inventory items, manage user accounts, handle service requests, and view real-time data through an intuitive dashboard.
+            </p>
+            <p>
+              The application follows a modern <strong style="color:#fff">decoupled architecture</strong> — the React frontend communicates with the Django REST API backend via RESTful endpoints, ensuring a clean separation of concerns and scalable design.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🚀 Tech Stack</h4>
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="name">Frontend</div>
+                <ul>
+                  <li>React 18</li>
+                  <li>Vite (Build Tool)</li>
+                  <li>CSS Modules</li>
+                  <li>Context API (Auth)</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Backend</div>
+                <ul>
+                  <li>Django 6.0</li>
+                  <li>Django REST Framework</li>
+                  <li>Token Authentication</li>
+                  <li>Gunicorn (WSGI)</li>
+                </ul>
+              </div>
+              <div class="tech-item">
+                <div class="name">Database & Deployment</div>
+                <ul>
+                  <li>PostgreSQL 17</li>
+                  <li>Railway.com (PaaS)</li>
+                  <li>WhiteNoise (Static)</li>
+                  <li>GitHub CI/CD</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📁 Application Modules</h4>
+            <div class="module-grid">
+              <div class="module-item">
+                <div class="title">🔐 Authentication</div>
+                <div class="desc">Custom user model with token-based login, registration, and role management</div>
+              </div>
+              <div class="module-item">
+                <div class="title">📊 Dashboard</div>
+                <div class="desc">Real-time overview of inventory status, statistics, and quick actions</div>
+              </div>
+              <div class="module-item">
+                <div class="title">📦 Inventory Management</div>
+                <div class="desc">Full CRUD operations for inventory items — create, read, update, and delete</div>
+              </div>
+              <div class="module-item">
+                <div class="title">👥 User Management</div>
+                <div class="desc">Admin panel for managing users, roles, and designations</div>
+              </div>
+              <div class="module-item">
+                <div class="title">🔧 Service Requests</div>
+                <div class="desc">Service request tracking and management workflow</div>
+              </div>
+              <div class="module-item">
+                <div class="title">👤 User Profile</div>
+                <div class="desc">Individual profile management with personalized settings</div>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Key Features</h4>
+            <ul>
+              <li>📱 <strong style="color:#fff">Responsive Design</strong> — Works seamlessly across desktop, tablet, and mobile devices</li>
+              <li>🔐 <strong style="color:#fff">Secure Authentication</strong> — Token-based auth with role-based access control</li>
+              <li>📊 <strong style="color:#fff">Interactive Dashboard</strong> — Real-time inventory stats and visual analytics</li>
+              <li>📦 <strong style="color:#fff">Full CRUD Operations</strong> — Complete inventory item management</li>
+              <li>👥 <strong style="color:#fff">User Management</strong> — Admin controls for creating and managing team members</li>
+              <li>🔧 <strong style="color:#fff">Service Request System</strong> — Organized workflow for handling service requests</li>
+              <li>⚡ <strong style="color:#fff">Fast Build with Vite</strong> — Lightning-fast frontend development and build process</li>
+              <li>🗄️ <strong style="color:#fff">PostgreSQL Database</strong> — Reliable, production-grade data storage</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">☁️ Deployment & CI/CD</h4>
+            <p>
+              The application is deployed on <strong style="color:#fff">Railway.com</strong> as three separate services — React frontend, Django backend, and PostgreSQL database. The project is connected to a GitHub repository with <strong style="color:#fff">automatic deployment</strong> enabled, meaning every push to the main branch triggers an automatic rebuild and redeploy of both frontend and backend services.
+            </p>
+            <ul>
+              <li>🚀 <strong style="color:#fff">Auto-deployment</strong> — Every git push to main triggers automatic redeploy on Railway</li>
+              <li>🏗️ <strong style="color:#fff">Multi-service architecture</strong> — Frontend, Backend, and Database run as separate Railway services</li>
+              <li>🌐 <strong style="color:#fff">Custom domain</strong> — Production app served at <a href="http://chutibd.com/" target="_blank" style="color:#12d640">chutibd.com</a></li>
+              <li>📦 <strong style="color:#fff">Automated migrations</strong> — Database migrations run automatically on each deployment</li>
+              <li>🗂️ <strong style="color:#fff">Static file serving</strong> — WhiteNoise handles static files efficiently in production</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🛠️ REST API Design</h4>
+            <p>
+              The backend exposes a well-structured RESTful API built with Django REST Framework, covering authentication, inventory operations, user management, and service requests. The API uses token-based authentication to secure all endpoints, ensuring only authorized users can access and modify data.
+            </p>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                "A production-grade inventory management system built for Chuti Group, featuring a modern React frontend, secure Django REST API backend, and fully automated CI/CD pipeline on Railway.com — designed for efficiency, scalability, and seamless team collaboration."
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="http://chutibd.com/" target="_blank" class="action-btn">🌐 Visit Website</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
+
