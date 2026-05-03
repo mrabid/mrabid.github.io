@@ -1,0 +1,275 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lead Collection &amp; Management System</title>
+  <meta content="Full-stack lead collection with real-time draft save, admin dashboard, and Railway deployment" name="description">
+  <meta content="Lead Management, Django REST, React, Vite, PostgreSQL, Railway, Marketing" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Critical Inline Styles for Instant Visibility -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+    }
+    .portfolio-details {
+      padding: 40px 0;
+      background: transparent;
+    }
+    .portfolio-details .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .portfolio-details .portfolio-info {
+      background: rgba(26, 26, 46, 0.8);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .portfolio-details .portfolio-info h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #12d640;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+    .portfolio-details .portfolio-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #12d640;
+      margin-top: 25px;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .portfolio-details .portfolio-info p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .portfolio-details .portfolio-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .portfolio-details .portfolio-info ul li {
+      color: #d0d0d0;
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .portfolio-details .portfolio-info ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #12d640;
+      font-size: 1.1rem;
+    }
+    .portfolio-details .portfolio-info ul li strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .portfolio-details .portfolio-info a {
+      color: #12d640;
+      text-decoration: none;
+    }
+    .portfolio-details .portfolio-info a:hover {
+      color: #0fb835;
+      text-decoration: underline;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0d7377 50%, #14a085 100%);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 8px;
+      box-shadow: 0 4px 20px rgba(13, 115, 119, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .action-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(13, 115, 119, 0.6);
+      background: linear-gradient(135deg, #14a085 0%, #0d7377 50%, #1e3a5f 100%);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .action-btn:hover::before {
+      left: 100%;
+    }
+    .action-btn.secondary {
+      background: transparent;
+      border: 2px solid #14a085;
+      color: #14a085;
+      box-shadow: 0 4px 15px rgba(20, 160, 133, 0.2);
+      text-shadow: none;
+    }
+    .action-btn.secondary:hover {
+      background: linear-gradient(135deg, #0d7377 0%, #14a085 100%);
+      color: #ffffff;
+      border-color: transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ======= Portfolio Details ======= -->
+  <main id="main">
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 portfolio-info">
+            <br>
+            <h2 style="color:#12d640">📋 Lead Collection &amp; Management System</h2>
+
+            <p style="font-size: 1.1em; color: #ccc; margin-bottom: 25px;">
+              A full-stack lead collection and management platform for marketing campaigns (for example Facebook Ads). It captures high-quality leads and reduces data loss by saving user input in real time, even when the form is never submitted.
+            </p>
+
+            <ul style="margin-bottom: 30px;">
+              <li><strong>🔧 Tech Stack</strong>: React (Vite), Django, Django REST Framework, PostgreSQL (production) / SQLite (development)</li>
+              <li><strong>🌍 Live — Lead Form</strong>: <a href="https://lead-production-0b8b.up.railway.app/" target="_blank" rel="noopener noreferrer" style="color:#12d640">lead-production-0b8b.up.railway.app</a></li>
+              <li><strong>📊 Live — Admin Dashboard</strong>: <a href="https://lead-production-8b49.up.railway.app/dashboard/" target="_blank" rel="noopener noreferrer" style="color:#12d640">Dashboard on Railway</a></li>
+              <li><strong>🚀 Deployment</strong>: Railway (separate frontend and backend services)</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🎯 Problem Statement</h4>
+            <p>
+              Typical lead flows lose incomplete submissions, discard users who abandon the form, and struggle with inconsistent data quality. This system addresses that with <strong style="color:#fff">real-time draft saving</strong>, flexible validation (phone <em>or</em> email), and an admin experience built for non-technical operators—not only the default Django admin.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">✨ Core Features</h4>
+            <ul>
+              <li><strong style="color:#fff">Real-time draft auto-save</strong> — Persists input while typing without requiring submit, reducing drop-off loss.</li>
+              <li><strong style="color:#fff">Smart submission rules</strong> — A lead counts as valid when phone <strong>or</strong> email is present.</li>
+              <li><strong style="color:#fff">Admin dashboard</strong> — Browse leads with filters for submission status (Draft / Submitted), contact type (Phone / Email), and activity date.</li>
+              <li><strong style="color:#fff">Soft delete &amp; trash</strong> — <code style="color:#12d640">deleted_at</code>-style workflow: restore or permanently delete (password-protected).</li>
+              <li><strong style="color:#fff">CSV export</strong> — Filtered export as Excel-friendly UTF-8 with BOM; preserves values such as leading zeros in phone numbers.</li>
+              <li><strong style="color:#fff">Custom admin UI</strong> — Improved login and dedicated dashboards beyond stock Django admin.</li>
+            </ul>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🏗️ System Architecture</h4>
+            <p>
+              <strong style="color:#fff">Frontend</strong> — React with Vite: lead form with auto-save; routes include <code style="color:#ccc">/</code> (form), <code style="color:#ccc">/login</code>, and <code style="color:#ccc">/dashboard</code> for admin flows.
+            </p>
+            <p>
+              <strong style="color:#fff">Backend</strong> — Django + DRF exposing REST endpoints such as <code style="color:#ccc">POST /api/save-draft/</code>, <code style="color:#ccc">POST /api/submit/</code>, <code style="color:#ccc">GET /api/leads/dashboard/</code>, and <code style="color:#ccc">GET /api/health/</code>.
+            </p>
+            <p>
+              <strong style="color:#fff">Lead lifecycle</strong> — <em>Draft</em> captures partial progress; <em>Submitted</em> applies validation. <strong style="color:#fff">Activity tracking</strong> uses a last-activity timestamp for filtering and analytics. Active lists exclude soft-deleted rows; trash shows only deleted entries.
+            </p>
+            <p>
+              API security uses environment-based configuration with appropriate <strong style="color:#fff">CORS</strong> and <strong style="color:#fff">CSRF</strong> settings for cross-origin communication between Railway-hosted services.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🛠️ Technologies Used</h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px;">
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Frontend</h5>
+                <ul>
+                  <li>React</li>
+                  <li>Vite</li>
+                </ul>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Backend</h5>
+                <ul>
+                  <li>Django</li>
+                  <li>Django REST Framework</li>
+                </ul>
+              </div>
+              <div style="flex: 1; min-width: 200px;">
+                <h5 style="color:#fff;">Database</h5>
+                <ul>
+                  <li>PostgreSQL (production)</li>
+                  <li>SQLite (development)</li>
+                </ul>
+              </div>
+            </div>
+
+            <h4 style="color:#12d640; margin-top: 30px;">📌 Use Cases &amp; Outcomes</h4>
+            <p>
+              Suited for paid social landing pages, sales teams that need clean contact data, and any business that wants fewer “invisible” leads. Outcomes include higher effective capture rate, less permanent loss from partial forms, and clearer operational decisions from structured filters and exports.
+            </p>
+
+            <h4 style="color:#12d640; margin-top: 30px;">🔮 Future Improvements</h4>
+            <ul>
+              <li>Lead scoring</li>
+              <li>Email / SMS integration</li>
+              <li>CRM integration</li>
+              <li>Real-time analytics dashboard</li>
+              <li>AI-assisted lead quality prediction</li>
+            </ul>
+
+            <div style="margin-top: 40px; padding: 20px; background: rgba(18, 214, 64, 0.1); border-left: 4px solid #12d640; border-radius: 4px;">
+              <p style="margin: 0; font-style: italic; color: #ccc;">
+                This project shows how a simple lead form can evolve into a practical lead-intelligence layer by combining behavioral capture (drafts), validation, recovery (trash/restore), and operator-friendly reporting.
+              </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+              <a href="https://lead-production-0b8b.up.railway.app/" target="_blank" rel="noopener noreferrer" class="action-btn">📝 Open Lead Form</a>
+              <a href="https://lead-production-8b49.up.railway.app/dashboard/" target="_blank" rel="noopener noreferrer" class="action-btn secondary">📊 Open Dashboard</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+</body>
+</html>
